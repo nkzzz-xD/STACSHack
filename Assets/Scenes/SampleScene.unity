@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 712725153}
   dialogueText: {fileID: 719911587}
+  continueButton: {fileID: 217645440}
   animator: {fileID: 1354662830}
   defaultAudio: {fileID: 8300000, guid: 6630c09a69555624cbb62d727ca94d33, type: 3}
   soundFrequency: 2

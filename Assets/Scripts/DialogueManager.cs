@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using TMPro;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class DialogueManager : MonoBehaviour
 
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
+
+    public Button continueButton;
 
     public Animator animator;
 
@@ -60,6 +63,9 @@ public class DialogueManager : MonoBehaviour
         }
 
         if (messages.Count == 0) {
+            // hide continue when no messages
+            continueButton.gameObject.SetActive(false);
+
             if (choices.Count == 0) {
                 EndDialogue();
                 return;
@@ -112,30 +118,26 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text += choices[i].choice + " - press " + (i + 1).ToString();
         }
 
-        yield return new WaitUntil(() => IsValidChoiceInput());
+        // Wait until the player presses a valid choice key
+        int selectedChoice = -1;
+        yield return new WaitUntil(() => (selectedChoice = GetSelectedChoice()) != -1);
 
-        // Loop through the number of choices and check for corresponding key inputs (1, 2, 3, etc.)
-        for (int i = 0; i < choices.Count; i++)
-        {
-            if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), "Alpha" + (i + 1))))
-            {
-                StartDialogue(choices[i].nextNode);
-            }
-        }
+        // Start the next dialogue node based on the selected choice
+        StartDialogue(choices[selectedChoice].nextNode);
+        continueButton.gameObject.SetActive(true);
     }
 
-    // Function to check if the player presses a valid key corresponding to the choices
-    private bool IsValidChoiceInput()
+    // Function to check for valid key presses and return the selected choice index
+    private int GetSelectedChoice()
     {
-        // Loop through the number of choices and check for corresponding key inputs (1, 2, 3, etc.)
         for (int i = 0; i < choices.Count; i++)
         {
-            if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), "Alpha" + (i + 1))))
+            if (Input.GetKeyDown(KeyCode.Alpha1 + i)) // Dynamically check the right key (1, 2, 3, ...)
             {
-                return true; // A valid key corresponding to a choice was pressed
+                return i;
             }
         }
-        return false; // No valid key was pressed yet
+        return -1; // No valid choice selected yet
     }
 
     void EndDialogue() {
