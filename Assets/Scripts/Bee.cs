@@ -10,6 +10,14 @@ public class Bee : MonoBehaviour
     public string Dialogue;
     public string Difficulty;
 
+    private DialogueTrigger dt;
+
+
+    public void Start()
+    {
+        dt = gameObject.GetComponent<DialogueTrigger>();
+    }
+
     // Setup the bee's data when it is spawned
     public void Setup(BeeData beeData)
     {
@@ -19,32 +27,24 @@ public class Bee : MonoBehaviour
         Dialogue = beeData.Dialogue;
         Difficulty = beeData.Difficulty;
 
+        
+
         // You can add any additional setup or behavior here
         Debug.Log("Bee " + Name + " has been spawned with role: " + Role);
     }
 
     public void Interact()
     {
-        Dialogue beeDialogue = new Dialogue();
-        beeDialogue.messages = new DialogueMessage[1];
-
-        DialogueMessage message = new DialogueMessage();
-        message.name = Name;
+        /*
+        dt.dialogue.node.name = Name;
+        dt.dialogue.node.messages
 
         message.sentence = "Role: " + Role + "\n" + Dialogue;
         message.colour = Color.black;
 
-        beeDialogue.messages[0] = message;
-
-        DialogueManager dialogueManager = Object.FindAnyObjectByType<DialogueManager>();
-        if (dialogueManager != null)
-        {
-            dialogueManager.StartDialogue(beeDialogue);
-        }
-        else
-        {
-            Debug.LogError("DialogueManager not found in scene!");
-        }
+       // beeDialogue.messages[0] = message;
+        */
+        dt.TriggerDialogue();
 
     }
 
