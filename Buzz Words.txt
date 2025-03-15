@@ -21,3 +21,5 @@ Talking will be like a Visual Novel
 
 20 bees in the map intially 
 over 100 different dialogue prompts
+
+Add bees that constantly rotate

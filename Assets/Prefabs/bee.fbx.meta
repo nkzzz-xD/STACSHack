@@ -1,21 +1,9 @@
 fileFormatVersion: 2
-guid: 65930675a89714e10aca9ca3a3d67258
-AssetOrigin:
-  serializedVersion: 1
-  productId: 201897
-  packageName: Mini Toon | Office Scene
-  packageVersion: 1.0
-  assetPath: Assets/Mini Toon Office/Models/props/toon_office_water_drinker.fbx
-  uploadId: 449881
+guid: 31b3a39cd035c644cbb0f4375d97dafe
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: toon character props
-    second: {fileID: 2100000, guid: ef4450285844e35458fbb1f8417f29d7, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -55,7 +43,7 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
-    nodeNameCollisionStrategy: 0
+    nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -111,8 +99,8 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
-  importBlendShapeDeformPercent: 0
-  remapMaterialsIfMaterialImportModeIsNone: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
