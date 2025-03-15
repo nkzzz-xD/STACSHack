@@ -2,7 +2,6 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using TMPro;
-using System;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -25,12 +24,6 @@ public class DialogueManager : MonoBehaviour
 
     private int count;
 
-    // For Y/N guess prompt:
-    public GameObject promptPanel;
-    public TextMeshProUGUI promptText;
-    private bool waitingForGuess = false;
-    private string currentBeeAlignment;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -38,11 +31,7 @@ public class DialogueManager : MonoBehaviour
         audioSource = gameObject.AddComponent<AudioSource>();
     }
 
-    public void StartDialogue(Dialogue dialogue, string beeAlignment) {
-
-        waitingForGuess = false;
-        currentBeeAlignment = beeAlignment;
-
+    public void StartDialogue(Dialogue dialogue) {
         messages.Clear();
         animator.SetBool("IsOpen", true);
         isTyping = false;
@@ -104,44 +93,5 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue() {
         animator.SetBool("IsOpen", false);
-    }
-
-    void ShowGuessPrompt()
-    {
-        promptPanel.SetActive(true);
-        promptText.text = "Guess: Is this bee Bad? Press Y for Yes, N for No.";
-        waitingForGuess = true;
-    }
-
-    void Update()
-    {
-        if (waitingForGuess)
-        {
-            if (Input.GetKeyDown(KeyCode.Y))
-            {
-                ProcessGuess(true);
-            }
-            else if (Input.GetKeyDown(KeyCode.N))
-            {
-                ProcessGuess(false);
-            }
-        }
-    }
-
-    void ProcessGuess(bool guessIsBad)
-    {
-        waitingForGuess = false;
-        promptPanel.SetActive(false);
-
-        bool isBeeBad = (currentBeeAlignment == "Bad");
-
-        if ((guessIsBad && isBeeBad) || (!guessIsBad && !isBeeBad))
-        {
-            Debug.Log("Correct guess!");
-        }
-        else
-        {
-            Debug.Log("Incorrect guess!");
-        }
     }
 }

@@ -39,7 +39,7 @@ public class Bee : MonoBehaviour
         DialogueManager dialogueManager = Object.FindAnyObjectByType<DialogueManager>();
         if (dialogueManager != null)
         {
-            dialogueManager.StartDialogue(beeDialogue, Alignment);
+            dialogueManager.StartDialogue(beeDialogue);
         }
         else
         {
