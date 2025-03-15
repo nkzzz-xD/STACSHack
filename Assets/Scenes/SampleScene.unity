@@ -150,7 +150,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 712725153}
   dialogueText: {fileID: 719911587}
+  continueButton: {fileID: 217645440}
   animator: {fileID: 1354662830}
+  defaultAudio: {fileID: 8300000, guid: 6630c09a69555624cbb62d727ca94d33, type: 3}
+  soundFrequency: 2
 --- !u!4 &30936533
 Transform:
   m_ObjectHideFlags: 0
@@ -581,18 +584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    sentences:
-    - As the sun dipped below the horizon, casting a warm golden glow across the
-      vast expanse of the ocean, the waves gently lapped against the shore, creating
-      a rhythmic melody that blended harmoniously with the distant cries of seagulls
-      soaring high above.
-    - As she walked through the bustling streets of the city, weaving her way through
-      the throngs of people hurriedly making their way to various destinations, she
-      couldn't help but marvel at the towering skyscrapers adorned with neon signs.
-    - The towering, ancient oak tree stood proudly in the middle of the sprawling
-      meadow, its gnarled branches stretching out in every direction, providing a
-      sanctuary for countless birds and small creatures.
-    name: ChatGPT
+    node: {fileID: 11400000, guid: 554f2b17c51421a4187d826b1e8750df, type: 2}
 --- !u!114 &630515100
 MonoBehaviour:
   m_ObjectHideFlags: 0
