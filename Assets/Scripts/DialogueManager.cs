@@ -38,7 +38,7 @@ public class DialogueManager : MonoBehaviour
         audioSource = gameObject.AddComponent<AudioSource>();
     }
 
-    public void StartDialogue(Dialogue dialogue, String beeAlignment) {
+    public void StartDialogue(Dialogue dialogue, string beeAlignment) {
 
         waitingForGuess = false;
         currentBeeAlignment = beeAlignment;
