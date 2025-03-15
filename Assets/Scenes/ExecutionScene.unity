@@ -2081,18 +2081,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0b527931496fee4ba702a2eb72a6635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  groundDrag: 0
-  jumpForce: 0
-  jumpCooldown: 0
-  airMultiplier: 0
+  moveSpeed: 7
+  groundDrag: 2
+  jumpForce: 6
+  jumpCooldown: 0.5
+  airMultiplier: 0.4
   walkSpeed: 0
   sprintSpeed: 0
   jumpKey: 32
-  playerHeight: 1
+  playerHeight: 2
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   orientation: {fileID: 457905935}
 --- !u!1001 &831575008
 PrefabInstance:
