@@ -1,6 +1,9 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
+using System.IO;
+using UnityEditor;
+using System.Linq;
 
 public class Bee : MonoBehaviour
 {
@@ -16,6 +19,38 @@ public class Bee : MonoBehaviour
     public void Start()
     {
         dt = gameObject.GetComponent<DialogueTrigger>();
+        string path;
+        if (Alignment.ToLower() == "good") {
+            path = "Assets/Dialogue/Good";
+        }
+        else {
+            path = "Assets/Dialogue/Bad";
+        }
+
+        int folderLen = Directory.GetDirectories(path).Length;
+
+        if (folderLen == 0) {
+            Debug.LogWarning("Warning: Directory " + path + " is empty");
+            return;
+        }
+
+        System.Random random = new System.Random();
+        int fileNo = random.Next(1, folderLen + 1);
+
+        string filePath = Path.Combine(path, fileNo.ToString());
+
+        filePath = Path.Combine(filePath, "init.asset");
+
+        DialogueNode node = AssetDatabase.LoadAssetAtPath<DialogueNode>(filePath);
+
+        // set all placeholder names to our name
+        node.messages.Where(
+            message => message.name == "placeholder"
+        ).ToList().ForEach(
+            message => message.name = Name
+        );
+
+        dt.dialogue.node = node;
     }
 
     // Setup the bee's data when it is spawned
@@ -45,7 +80,6 @@ public class Bee : MonoBehaviour
        // beeDialogue.messages[0] = message;
         */
         dt.TriggerDialogue();
-
     }
 
     void OnMouseDown()
