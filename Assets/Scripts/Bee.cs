@@ -26,7 +26,7 @@ public class Bee : MonoBehaviour
     public void Interact()
     {
         Dialogue beeDialogue = new Dialogue();
-        beeDialogue.messages = new DialogueMessage[1];
+        // beeDialogue.messages = new DialogueMessage[1];
 
         DialogueMessage message = new DialogueMessage();
         message.name = Name;
@@ -34,12 +34,12 @@ public class Bee : MonoBehaviour
         message.sentence = "Role: " + Role + "\n" + Dialogue;
         message.colour = Color.black;
 
-        beeDialogue.messages[0] = message;
+        // beeDialogue.messages[0] = message;
 
         DialogueManager dialogueManager = Object.FindAnyObjectByType<DialogueManager>();
         if (dialogueManager != null)
         {
-            dialogueManager.StartDialogue(beeDialogue);
+            // dialogueManager.StartDialogue(beeDialogue);
         }
         else
         {
