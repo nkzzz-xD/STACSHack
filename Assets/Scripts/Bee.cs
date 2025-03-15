@@ -1,4 +1,6 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Bee : MonoBehaviour
 {
@@ -27,6 +29,27 @@ public class Bee : MonoBehaviour
         beeDialogue.messages = new DialogueMessage[1];
 
         DialogueMessage message = new DialogueMessage();
-        
+        message.name = Name;
+
+        message.sentence = "Role: " + Role + "\n" + Dialogue;
+        message.colour = Color.black;
+
+        beeDialogue.messages[0] = message;
+
+        DialogueManager dialogueManager = Object.FindAnyObjectByType<DialogueManager>();
+        if (dialogueManager != null)
+        {
+            dialogueManager.StartDialogue(beeDialogue, Alignment);
+        }
+        else
+        {
+            Debug.LogError("DialogueManager not found in scene!");
+        }
+
+    }
+
+    void OnMouseDown()
+    {
+        Interact();
     }
 }

@@ -10,7 +10,7 @@ public class BeeSpawner : MonoBehaviour
 
     private List<BeeData> beeList = new List<BeeData>();
     
-    public BeeManager beeManager;
+    
 
     void Start(){
         spawnPoints = new List<Vector3>{
