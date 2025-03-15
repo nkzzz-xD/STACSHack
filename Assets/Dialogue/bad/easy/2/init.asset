@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: init
   m_EditorClassIdentifier: 
   messages:
-  - sentence: this is bad 2
-    name: bad 2
+  - sentence: We need to disrupt the industry with next-gen solutions
+    name: placeholder
     audioClip: {fileID: 0}
-    colour: {r: 0.7647059, g: 0.054155387, b: 0, a: 1}
+    colour: {r: 0, g: 0.054155387, b: 0, a: 1}
   choices: []

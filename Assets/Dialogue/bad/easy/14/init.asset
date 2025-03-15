@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: init
   m_EditorClassIdentifier: 
   messages:
-  - sentence: We need to be in sync with the new normal
+  - sentence: We need to engage stakeholders more effectively
     name: placeholder
     audioClip: {fileID: 0}
-    colour: {r: 0, g: 0, b: 0, a: 1}
+    colour: {r: 0, g: 0.054155387, b: 0, a: 1}
   choices: []

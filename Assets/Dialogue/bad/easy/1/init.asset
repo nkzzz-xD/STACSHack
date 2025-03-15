@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: init
   m_EditorClassIdentifier: 
   messages:
-  - sentence: This is bad message 1
-    name: bad 1
+  - sentence: Let's circle back on this after our standup
+    name: placeholder
     audioClip: {fileID: 0}
     colour: {r: 0, g: 0, b: 0, a: 1}
   choices: []

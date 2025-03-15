@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f22b281ec4011c14fa506bdb02f974a2, type: 3}
-  m_Name: pt2
+  m_Name: init
   m_EditorClassIdentifier: 
   messages:
-  - sentence: hahahahaha
+  - sentence: We need to harmonise company culture and innovation
     name: placeholder
     audioClip: {fileID: 0}
-    colour: {r: 0.021238793, g: 0.5924529, b: 0.51110667, a: 1}
+    colour: {r: 0, g: 0.054155387, b: 0, a: 1}
   choices: []
