@@ -44,7 +44,7 @@ public class NewBeeSpawner : MonoBehaviour
             .ToArray();
 
         foreach (Transform transform in allChildren) {
-            GameObject myObj = Instantiate(bee, transform.position, Quaternion.identity);
+            GameObject myObj = Instantiate(bee, transform.position, transform.rotation);
             if (random.Next(0, 2) == 0) {
                 myObj.GetComponent<Bee>().Alignment = "good";
             }
