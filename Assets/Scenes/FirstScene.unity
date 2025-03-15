@@ -585,19 +585,13 @@ MonoBehaviour:
     - As the sun dipped below the horizon, casting a warm golden glow across the
       vast expanse of the ocean, the waves gently lapped against the shore, creating
       a rhythmic melody that blended harmoniously with the distant cries of seagulls
-      soaring high above, their silhouettes barely visible against the deepening
-      hues of the evening sky.
-    - The towering, ancient oak tree stood proudly in the middle of the sprawling
-      meadow, its gnarled branches stretching out in every direction, providing a
-      sanctuary for countless birds and small creatures, while its thick roots, hidden
-      beneath the earth, had long intertwined with the land, anchoring it firmly
-      through centuries of changing seasons and shifting landscapes.
+      soaring high above.
     - As she walked through the bustling streets of the city, weaving her way through
       the throngs of people hurriedly making their way to various destinations, she
-      couldn't help but marvel at the towering skyscrapers adorned with neon signs,
-      the aroma of freshly baked bread wafting from a nearby bakery, and the distant
-      sound of a street musician playing a melancholic tune on his violin, all blending
-      together to create a symphony of urban life.
+      couldn't help but marvel at the towering skyscrapers adorned with neon signs.
+    - The towering, ancient oak tree stood proudly in the middle of the sprawling
+      meadow, its gnarled branches stretching out in every direction, providing a
+      sanctuary for countless birds and small creatures.
     name: ChatGPT
 --- !u!114 &630515100
 MonoBehaviour:
@@ -1934,7 +1928,7 @@ MonoBehaviour:
   cameraCanMove: 1
   mouseSensitivity: 5
   maxLookAngle: 50
-  lockCursor: 1
+  lockCursor: 0
   crosshair: 1
   crosshairImage: {fileID: 21300000, guid: be4ce60e2c9768c44b9b10b9c5258045, type: 3}
   crosshairColor: {r: 1, g: 1, b: 1, a: 1}
