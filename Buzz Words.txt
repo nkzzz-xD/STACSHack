@@ -7,3 +7,13 @@ Office Bees  Say Buzz words
 Positive score for more office bees shot
 Negative for less 
 timer
+
+## To do
+Get sprites 
+Generate a map 
+Get the basic movement working 
+Create a list of Buzzwords's / conversations Bees have 
+
+
+Create a nice Story (Can we ask bee's questions?)
+Talking will be like a Visual Novel
