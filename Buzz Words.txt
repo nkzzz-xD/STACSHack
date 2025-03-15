@@ -7,3 +7,7 @@ Office Bees  Say Buzz words
 Positive score for more office bees shot
 Negative for less 
 timer
+
+need a list of buzz words
+need a list of easy caught words
+need harder ones
