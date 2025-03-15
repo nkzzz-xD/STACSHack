@@ -5870,7 +5870,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 216131415}
   detectionRange: 500
-  speed: 5
+  speed: 4
   offset: 100
 --- !u!1001 &1124539510
 PrefabInstance:
