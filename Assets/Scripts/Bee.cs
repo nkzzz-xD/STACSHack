@@ -38,8 +38,6 @@ public class Bee : MonoBehaviour
         System.Random random = new System.Random();
         int fileNo = random.Next(1, folderLen + 1);
 
-        if (Alignment.ToLower() == "good") fileNo = 4;
-
         string filePath = Path.Combine(path, fileNo.ToString());
 
         filePath = Path.Combine(filePath, "init.asset");
