@@ -16,16 +16,24 @@ public class DialogueManager : MonoBehaviour
 
     public Animator animator;
 
+    private AudioClip audioClip;
+    private AudioSource audioSource;
+
+    private bool playSound = true;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         sentences = new Queue<string>();
+        audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     public void StartDialogue(Dialogue dialogue) {
         sentences.Clear();
         animator.SetBool("IsOpen", true);
         isTyping = false;
+
+        audioClip = dialogue.audioClip;
 
         foreach (string sentence in dialogue.sentences) {
             sentences.Enqueue(sentence);
@@ -36,6 +44,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void DisplayNextSentence() {
+        Debug.Log("press");
         if (isTyping) {
             StopAllCoroutines();
             dialogueText.text = currentSentence;
@@ -60,6 +69,11 @@ public class DialogueManager : MonoBehaviour
 
         foreach (char letter in sentence.ToCharArray()) {
             dialogueText.text += letter;
+            if (playSound) {
+                audioSource.PlayOneShot(audioClip);
+            }
+
+            playSound = !playSound;
             // one char per frame
             yield return new WaitForSeconds(0.025f);
         }
