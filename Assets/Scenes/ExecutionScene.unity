@@ -3149,7 +3149,7 @@ MonoBehaviour:
   totalThrows: 100
   throwCooldown: 0.1
   throwKey: 323
-  throwForce: 30
+  throwForce: 20
   throwUpwardForce: 0
 --- !u!1001 &831575008
 PrefabInstance:
@@ -8876,13 +8876,4 @@ SceneRoots:
   - {fileID: 408292322}
   - {fileID: 998256074}
   - {fileID: 939108886}
-  - {fileID: 1644294494}
-  - {fileID: 1623657582}
-  - {fileID: 1329129116}
-  - {fileID: 1147891706}
-  - {fileID: 1978413566}
-  - {fileID: 887934984}
-  - {fileID: 1039347579}
-  - {fileID: 220305301}
-  - {fileID: 2103428648}
   - {fileID: 144716225}
