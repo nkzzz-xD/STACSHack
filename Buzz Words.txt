@@ -1,0 +1,10 @@
+Buzz Words
+
+Shooter fps
+Office setting 
+Worker Bees Normal sentences
+Office Bees  Say Buzz words
+Robot Bees fighting back 
+Positive score for more office bees shot
+Negative for less 
+timer
