@@ -21,10 +21,10 @@ public class Bee : MonoBehaviour
         dt = gameObject.GetComponent<DialogueTrigger>();
         string path;
         if (Alignment.ToLower() == "good") {
-            path = "Assets/Dialogue/Good";
+            path = $"Assets/Dialogue/Good/{GameState.difficulty.ToLower()}";
         }
         else {
-            path = "Assets/Dialogue/Bad";
+            path = $"Assets/Dialogue/Bad/{GameState.difficulty.ToLower()}";
         }
 
         int folderLen = Directory.GetDirectories(path).Length;

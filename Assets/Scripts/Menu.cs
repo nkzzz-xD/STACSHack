@@ -35,6 +35,7 @@ public class Menu : MonoBehaviour
 
     public void StartGame()
     {
+        GameState.difficulty = "easy";
         SceneManager.LoadScene("Office"); // Load the scene with the name "Office"
     }
 }
