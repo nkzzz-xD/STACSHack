@@ -327,7 +327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: wallace
   Role: wheel boy
-  Alignment: evil
+  Alignment: bad
   Dialogue: na
   Difficulty: hard
 --- !u!135 &157287227
@@ -676,7 +676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: wallace
   Role: wheel boy
-  Alignment: evil
+  Alignment: good
   Dialogue: na
   Difficulty: hard
 --- !u!114 &376318553

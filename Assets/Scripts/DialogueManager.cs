@@ -129,11 +129,11 @@ public class DialogueManager : MonoBehaviour
     }
 
     IEnumerator ShowChoices() {
-        dialogueText.text = choices[0].choice + " - press 1";
+        dialogueText.text = "\"" + choices[0].choice + "\" - press 1";
 
         for (int i = 1; i < choices.Count; i++) {
             dialogueText.text += "\n";
-            dialogueText.text += choices[i].choice + " - press " + (i + 1).ToString();
+            dialogueText.text += "\"" + choices[i].choice + "\" - press " + (i + 1).ToString();
         }
 
         // Wait until the player presses a valid choice key
