@@ -20,4 +20,13 @@ public class Bee : MonoBehaviour
         // You can add any additional setup or behavior here
         Debug.Log("Bee " + Name + " has been spawned with role: " + Role);
     }
+
+    public void Interact()
+    {
+        Dialogue beeDialogue = new Dialogue();
+        beeDialogue.messages = new DialogueMessage[1];
+
+        DialogueMessage message = new DialogueMessage();
+        
+    }
 }
