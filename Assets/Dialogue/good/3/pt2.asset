@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messages:
   - sentence: thats preetyy good
-    name: guy 3
+    name: placeholder
     audioClip: {fileID: 0}
     colour: {r: 0.021238793, g: 0.5924529, b: 0.51110667, a: 1}
   choices: []
