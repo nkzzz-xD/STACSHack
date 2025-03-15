@@ -40,6 +40,8 @@ public class DialogueManager : MonoBehaviour
         messages.Clear();
         choices.Clear();
 
+        continueButton.gameObject.SetActive(true);
+
         animator.SetBool("IsOpen", true);
         isTyping = false;
 
