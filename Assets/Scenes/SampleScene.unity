@@ -151,6 +151,8 @@ MonoBehaviour:
   nameText: {fileID: 712725153}
   dialogueText: {fileID: 719911587}
   animator: {fileID: 1354662830}
+  defaultAudio: {fileID: 8300000, guid: 6630c09a69555624cbb62d727ca94d33, type: 3}
+  soundFrequency: 2
 --- !u!4 &30936533
 Transform:
   m_ObjectHideFlags: 0
@@ -581,24 +583,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    sentences:
-    - As the sun dipped below the horizon, casting a warm golden glow across the
-      vast expanse of the ocean, the waves gently lapped against the shore, creating
-      a rhythmic melody that blended harmoniously with the distant cries of seagulls
-      soaring high above, their silhouettes barely visible against the deepening
-      hues of the evening sky.
-    - The towering, ancient oak tree stood proudly in the middle of the sprawling
-      meadow, its gnarled branches stretching out in every direction, providing a
-      sanctuary for countless birds and small creatures, while its thick roots, hidden
-      beneath the earth, had long intertwined with the land, anchoring it firmly
-      through centuries of changing seasons and shifting landscapes.
-    - As she walked through the bustling streets of the city, weaving her way through
-      the throngs of people hurriedly making their way to various destinations, she
-      couldn't help but marvel at the towering skyscrapers adorned with neon signs,
-      the aroma of freshly baked bread wafting from a nearby bakery, and the distant
-      sound of a street musician playing a melancholic tune on his violin, all blending
-      together to create a symphony of urban life.
-    name: ChatGPT
+    messages:
+    - sentence: Hi there I am a person
+      name: Person
+      audioClip: {fileID: 0}
+      colour: {r: 0, g: 0, b: 0, a: 1}
+    - sentence: I think this is a person
+      name: Me
+      audioClip: {fileID: 0}
+      colour: {r: 0, g: 0.5171423, b: 1, a: 1}
+    - sentence: You are certainly a person.
+      name: Me
+      audioClip: {fileID: 0}
+      colour: {r: 0, g: 0, b: 0, a: 1}
 --- !u!114 &630515100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1235,6 +1232,7 @@ GameObject:
   - component: {fileID: 912608123}
   - component: {fileID: 912608125}
   - component: {fileID: 912608124}
+  - component: {fileID: 912608126}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: MainCamera
@@ -1317,6 +1315,50 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &912608126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912608122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1 &998189466
 GameObject:
   m_ObjectHideFlags: 0
@@ -1889,7 +1931,7 @@ MonoBehaviour:
   cameraCanMove: 1
   mouseSensitivity: 5
   maxLookAngle: 50
-  lockCursor: 1
+  lockCursor: 0
   crosshair: 1
   crosshairImage: {fileID: 21300000, guid: be4ce60e2c9768c44b9b10b9c5258045, type: 3}
   crosshairColor: {r: 1, g: 1, b: 1, a: 1}
