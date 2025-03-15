@@ -17,4 +17,8 @@ MonoBehaviour:
     name: placeholder
     audioClip: {fileID: 0}
     colour: {r: 0.7735849, g: 0.76243854, b: 0, a: 0}
+  - sentence: that's good
+    name: placeholder
+    audioClip: {fileID: 0}
+    colour: {r: 0.7735849, g: 0.76243854, b: 0, a: 0}
   choices: []

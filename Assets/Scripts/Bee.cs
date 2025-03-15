@@ -4,6 +4,7 @@ using UnityEngine.UIElements;
 using System.IO;
 using UnityEditor;
 using System.Linq;
+using UnityEngine.AI;
 
 public class Bee : MonoBehaviour
 {
@@ -37,6 +38,8 @@ public class Bee : MonoBehaviour
         System.Random random = new System.Random();
         int fileNo = random.Next(1, folderLen + 1);
 
+        if (Alignment.ToLower() == "good") fileNo = 4;
+
         string filePath = Path.Combine(path, fileNo.ToString());
 
         filePath = Path.Combine(filePath, "init.asset");
@@ -44,13 +47,22 @@ public class Bee : MonoBehaviour
         DialogueNode node = AssetDatabase.LoadAssetAtPath<DialogueNode>(filePath);
 
         // set all placeholder names to our name
-        node.messages.Where(
-            message => message.name == "placeholder"
-        ).ToList().ForEach(
-            message => message.name = Name
-        );
+        replacePlaceholder(node);
 
         dt.dialogue.node = node;
+    }
+
+
+    private void replacePlaceholder(DialogueNode node) {
+        foreach (DialogueMessage message in node.messages) {
+            if (message.name == "placeholder") {
+                message.name = Name;
+            }
+        }
+
+        foreach (DialogueChoice choice in node.choices) {
+            replacePlaceholder(choice.nextNode);
+        }
     }
 
     // Setup the bee's data when it is spawned

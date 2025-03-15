@@ -87,6 +87,7 @@ public class DialogueManager : MonoBehaviour
 
         DialogueMessage message = messages.Dequeue();
         currentMessage = message;
+
         count = 0;
         StopAllCoroutines();
         StartCoroutine(TypeSentence(message));
@@ -100,6 +101,12 @@ public class DialogueManager : MonoBehaviour
     }
 
     IEnumerator TypeSentence(DialogueMessage message) {
+        // defaults as invisible and sometimes we forget
+        // this is just a precaution.
+        if (message.colour.a == 0) {
+            message.colour.a = 1;
+        }
+
         isTyping = true;
         dialogueText.text = "";
         nameText.text = message.name;
@@ -130,6 +137,7 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator ShowChoices() {
         dialogueText.text = "\"" + choices[0].choice + "\" - press 1";
+        nameText.text = "";
 
         for (int i = 1; i < choices.Count; i++) {
             dialogueText.text += "\n";
