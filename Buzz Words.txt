@@ -17,3 +17,7 @@ Create a list of Buzzwords's / conversations Bees have
 
 Create a nice Story (Can we ask bee's questions?)
 Talking will be like a Visual Novel
+
+
+20 bees in the map intially 
+over 100 different dialogue prompts
