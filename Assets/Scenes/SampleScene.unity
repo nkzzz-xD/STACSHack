@@ -151,6 +151,7 @@ MonoBehaviour:
   nameText: {fileID: 712725153}
   dialogueText: {fileID: 719911587}
   animator: {fileID: 1354662830}
+  defaultAudio: {fileID: 8300000, guid: 6630c09a69555624cbb62d727ca94d33, type: 3}
   soundFrequency: 2
 --- !u!4 &30936533
 Transform:
@@ -582,19 +583,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    sentences:
-    - As the sun dipped below the horizon, casting a warm golden glow across the
-      vast expanse of the ocean, the waves gently lapped against the shore, creating
-      a rhythmic melody that blended harmoniously with the distant cries of seagulls
-      soaring high above.
-    - As she walked through the bustling streets of the city, weaving her way through
-      the throngs of people hurriedly making their way to various destinations, she
-      couldn't help but marvel at the towering skyscrapers adorned with neon signs.
-    - The towering, ancient oak tree stood proudly in the middle of the sprawling
-      meadow, its gnarled branches stretching out in every direction, providing a
-      sanctuary for countless birds and small creatures.
-    name: ChatGPT
-    audioClip: {fileID: 8300000, guid: 6630c09a69555624cbb62d727ca94d33, type: 3}
+    messages:
+    - sentence: Hi there I am a person
+      name: Person
+      audioClip: {fileID: 0}
+      colour: {r: 0, g: 0, b: 0, a: 1}
+    - sentence: I think this is a person
+      name: Me
+      audioClip: {fileID: 0}
+      colour: {r: 0, g: 0.5171423, b: 1, a: 1}
+    - sentence: You are certainly a person.
+      name: Me
+      audioClip: {fileID: 0}
+      colour: {r: 0, g: 0, b: 0, a: 1}
 --- !u!114 &630515100
 MonoBehaviour:
   m_ObjectHideFlags: 0
