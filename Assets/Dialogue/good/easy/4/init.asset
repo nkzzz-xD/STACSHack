@@ -13,16 +13,8 @@ MonoBehaviour:
   m_Name: init
   m_EditorClassIdentifier: 
   messages:
-  - sentence: How's it going
-    name: me
-    audioClip: {fileID: 0}
-    colour: {r: 0, g: 0, b: 0, a: 1}
-  - sentence: I am good how are you
+  - sentence: I'll send the report to you by the end of the day.
     name: placeholder
     audioClip: {fileID: 0}
-    colour: {r: 0.7549607, g: 0.8113208, b: 0, a: 1}
-  choices:
-  - choice: i am good
-    nextNode: {fileID: 11400000, guid: 9389bd45706668e43a25d12ba9326980, type: 2}
-  - choice: i am bad
-    nextNode: {fileID: 11400000, guid: f2a216a74047f3f40ad62449306ef461, type: 2}
+    colour: {r: 0, g: 0, b: 0, a: 1}
+  choices: []

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: init
   m_EditorClassIdentifier: 
   messages:
-  - sentence: We want to make sure every bee feels valued and heard.
+  - sentence: We should focus on making our service easier to use.
     name: placeholder
     audioClip: {fileID: 0}
     colour: {r: 0, g: 0, b: 0, a: 1}

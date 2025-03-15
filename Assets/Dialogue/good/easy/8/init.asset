@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f22b281ec4011c14fa506bdb02f974a2, type: 3}
-  m_Name: bad
+  m_Name: init
   m_EditorClassIdentifier: 
   messages:
-  - sentence: sorry
+  - sentence: Let's make sure this contract is clear and fair.
     name: placeholder
     audioClip: {fileID: 0}
-    colour: {r: 0.78867924, g: 0.7624714, b: 0, a: 0}
+    colour: {r: 0, g: 0, b: 0, a: 1}
   choices: []
