@@ -1,7 +1,5 @@
-using UnityEngine;
-
 [System.Serializable]
 public class Dialogue
 {
-    public DialogueMessage[] messages;
+    public DialogueNode node;  // Starting node
 }

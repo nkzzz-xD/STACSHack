@@ -583,19 +583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    messages:
-    - sentence: Hi there I am a person
-      name: Person
-      audioClip: {fileID: 0}
-      colour: {r: 0, g: 0, b: 0, a: 1}
-    - sentence: I think this is a person
-      name: Me
-      audioClip: {fileID: 0}
-      colour: {r: 0, g: 0.5171423, b: 1, a: 1}
-    - sentence: You are certainly a person.
-      name: Me
-      audioClip: {fileID: 0}
-      colour: {r: 0, g: 0, b: 0, a: 1}
+    node: {fileID: 11400000, guid: 554f2b17c51421a4187d826b1e8750df, type: 2}
 --- !u!114 &630515100
 MonoBehaviour:
   m_ObjectHideFlags: 0
