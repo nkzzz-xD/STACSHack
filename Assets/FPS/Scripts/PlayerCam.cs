@@ -1,10 +1,10 @@
 using UnityEngine;
-using Ststem.Collections;
-using Systme.Collections.Generic;
+using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerCam : MonoBehaviour
 {
-    public floatr sensX
+    public float sensX;
     public float sensY;
 
     public Transform orientation;
