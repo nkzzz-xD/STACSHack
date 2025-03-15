@@ -19,7 +19,10 @@ public class DialogueManager : MonoBehaviour
     private AudioClip audioClip;
     private AudioSource audioSource;
 
-    private bool playSound = true;
+    [SerializeField]
+    private int soundFrequency;
+
+    private int count;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -59,6 +62,7 @@ public class DialogueManager : MonoBehaviour
 
         string sentence = sentences.Dequeue();
         currentSentence = sentence;
+        count = 0;
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     }
@@ -69,11 +73,11 @@ public class DialogueManager : MonoBehaviour
 
         foreach (char letter in sentence.ToCharArray()) {
             dialogueText.text += letter;
-            if (playSound) {
+            if (count % soundFrequency == 0) {
                 audioSource.PlayOneShot(audioClip);
             }
 
-            playSound = !playSound;
+            count++;
             // one char per frame
             yield return new WaitForSeconds(0.025f);
         }

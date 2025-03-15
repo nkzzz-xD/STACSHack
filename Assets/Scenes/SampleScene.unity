@@ -151,6 +151,7 @@ MonoBehaviour:
   nameText: {fileID: 712725153}
   dialogueText: {fileID: 719911587}
   animator: {fileID: 1354662830}
+  soundFrequency: 2
 --- !u!4 &30936533
 Transform:
   m_ObjectHideFlags: 0
