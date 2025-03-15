@@ -36,11 +36,19 @@ public class DialogueManager : MonoBehaviour
         audioSource = gameObject.AddComponent<AudioSource>();
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return)) {
+            DisplayNextSentence();
+        }
+    }
+
     public void StartDialogue(DialogueNode dialogue) {
         messages.Clear();
         choices.Clear();
 
-        continueButton.gameObject.SetActive(true);
+        continueButton.gameObject.SetActive(false);
+        continueButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Continue »";
 
         animator.SetBool("IsOpen", true);
         isTyping = false;
@@ -57,6 +65,8 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void DisplayNextSentence() {
+        continueButton.gameObject.SetActive(false);
+        
         if (isTyping) {
             StopAllCoroutines();
             dialogueText.text = currentMessage.sentence;
@@ -65,8 +75,6 @@ public class DialogueManager : MonoBehaviour
         }
 
         if (messages.Count == 0) {
-            // hide continue when no messages
-            continueButton.gameObject.SetActive(false);
 
             if (choices.Count == 0) {
                 EndDialogue();
@@ -79,12 +87,26 @@ public class DialogueManager : MonoBehaviour
 
         DialogueMessage message = messages.Dequeue();
         currentMessage = message;
+
         count = 0;
         StopAllCoroutines();
         StartCoroutine(TypeSentence(message));
+
+        if (messages.Count == 0 && choices.Count == 0) {
+            continueButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "End »";
+        }
+        else {
+            continueButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Continue »";
+        }
     }
 
     IEnumerator TypeSentence(DialogueMessage message) {
+        // defaults as invisible and sometimes we forget
+        // this is just a precaution.
+        if (message.colour.a == 0) {
+            message.colour.a = 1;
+        }
+
         isTyping = true;
         dialogueText.text = "";
         nameText.text = message.name;
@@ -110,14 +132,16 @@ public class DialogueManager : MonoBehaviour
         }
 
         isTyping = false;
+        continueButton.gameObject.SetActive(true);
     }
 
     IEnumerator ShowChoices() {
-        dialogueText.text = choices[0].choice + " - press 1";
+        dialogueText.text = "\"" + choices[0].choice + "\" - press 1";
+        nameText.text = "";
 
         for (int i = 1; i < choices.Count; i++) {
             dialogueText.text += "\n";
-            dialogueText.text += choices[i].choice + " - press " + (i + 1).ToString();
+            dialogueText.text += "\"" + choices[i].choice + "\" - press " + (i + 1).ToString();
         }
 
         // Wait until the player presses a valid choice key
@@ -126,7 +150,6 @@ public class DialogueManager : MonoBehaviour
 
         // Start the next dialogue node based on the selected choice
         StartDialogue(choices[selectedChoice].nextNode);
-        continueButton.gameObject.SetActive(true);
     }
 
     // Function to check for valid key presses and return the selected choice index

@@ -17,4 +17,6 @@ MonoBehaviour:
     name: chatgpt
     audioClip: {fileID: 0}
     colour: {r: 1, g: 0, b: 0, a: 1}
-  choices: []
+  choices:
+  - choice: fuck you too bitch ass
+    nextNode: {fileID: 11400000, guid: 802e1e497d1ed1e4b93620a3a46accbd, type: 2}
