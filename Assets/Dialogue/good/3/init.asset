@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messages:
   - sentence: hi how's it going
-    name: guy 3
+    name: wallace
     audioClip: {fileID: 0}
     colour: {r: 0, g: 0, b: 0, a: 1}
   choices:
