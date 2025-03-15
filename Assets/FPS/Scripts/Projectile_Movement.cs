@@ -23,21 +23,15 @@ public class ProjectileMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Handle collision logic here
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player hit! Damage: " + damage);
-            // Apply damage to player (add player health script logic here)
-
-            // have a player global health
-
-            // have a if for a hit bee
+            PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(damage);
+            }
         }
 
-        // Destroy the projectile on impact
-        if (gameObject != null)
-        {
-            Destroy(gameObject);
-        }
+        Destroy(gameObject);
     }
 }
