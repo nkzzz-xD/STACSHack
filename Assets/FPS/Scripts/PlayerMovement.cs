@@ -9,15 +9,30 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
 
 
+    public float groundDrag;
+
+
+    public float jumpForce;
+    public float jumpCooldown;
+    public float airMultiplier;
+    bool readyToJump;
+
+
+    [HideInInspector] public float walkSpeed;
+    [HideInInspector] public float sprintSpeed;
+
+
+    [Header("Keybinds")]
+    public KeyCode jumpKey = KeyCode.Space;
+
+
     [Header("Ground Check")]
     public float playerHeight;
     public LayerMask whatIsGround;
-    bool grounded;    
+    bool grounded;
 
 
     public Transform orientation;
-
-
 
 
     float horizontalInput;
@@ -25,10 +40,9 @@ public class PlayerMovement : MonoBehaviour
 
 
     Vector3 moveDirection;
-    Rigidbody rb;
 
 
-
+    Rigidbody rb;    
 
     private void Start()
     {
@@ -38,9 +52,31 @@ public class PlayerMovement : MonoBehaviour
     
     private void Update()
     {
+        // ground check
+        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround);
+
         MyInput();
+        SpeedControl();
+        // handle drag
+        if (grounded) {
+            rb.linearDamping = groundDrag;
+        } else {
+            rb.linearDamping = 0;
+        }
     }
 
+    private void SpeedControl()
+    {
+        Vector3 flatVel = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
+
+
+        // limit velocity if needed
+        if(flatVel.magnitude > moveSpeed)
+        {
+            Vector3 limitedVel = flatVel.normalized * moveSpeed;
+            rb.linearVelocity = new Vector3(limitedVel.x, rb.linearVelocity.y, limitedVel.z);
+        }
+    }
 
 
     // Update is called once per frame
@@ -54,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
-}
+    }
 
 
     private void MovePlayer()
