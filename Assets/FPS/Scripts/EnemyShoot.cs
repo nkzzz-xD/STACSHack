@@ -29,6 +29,13 @@ public class EnemyShoot : MonoBehaviour
 
     private void Attack()
     {
+        Vector3 directionToPlayer = (player.position - firePoint.position).normalized;
+        //directionToPlayer.y = 0; // This ensures the firePoint only rotates horizontally
+
+    // Rotate the firePoint to face the player
+        firePoint.rotation = Quaternion.LookRotation(directionToPlayer);
+
+    // Instantiate the projectile at the firePoint's position and rotation
         Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
     }
 
