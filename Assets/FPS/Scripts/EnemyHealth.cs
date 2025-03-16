@@ -48,10 +48,13 @@ public class EnemyHealth : MonoBehaviour
         IsDead = true;
 
         
-
         if (beeType == "normal") {
             scoreCounter.NormalBeeKilled();
         }
+        else if (beeType == "queen") {
+            scoreCounter.QueenBeeKilled();
+        }
+    
 
         // Add death logic here (e.g., play animation, disable controls, show game over)
         Debug.Log("Robee has died!");

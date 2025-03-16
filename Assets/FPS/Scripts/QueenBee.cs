@@ -32,7 +32,21 @@ public class QueenBee : MonoBehaviour
     }
 
 
+    private void SpawnBee()
+    {
+        if (beePrefab == null) return;
 
+        // Random position within spawn radius
+        Vector3 spawnPos = transform.position + (Random.insideUnitSphere * spawnRadius);
+        spawnPos.y = transform.position.y; // Keep it at Queen's height (2D-ish plane)
+
+        GameObject newBee = Instantiate(beePrefab, spawnPos, Quaternion.identity);
+        spawnedBeeCount++;
+
+        // Optional: Pass Queen reference to spawned bee for cleanup
+        BeeMinion beeScript = newBee.GetComponent<BeeMinion>();
+        if (beeScript != null) beeScript.SetQueen(this);
+    }
 
     public void TakeDamage(int damage)
     {
