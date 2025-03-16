@@ -6,6 +6,7 @@ using UnityEditor;
 using System.Linq;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class Bee : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class Bee : MonoBehaviour
     public string Difficulty;
 
     private DialogueTrigger dt;
-    private static int badBeeCount = 0; // Tracks bad bees deleted
+    private static int badBeesFound = 0; // Tracks bad bees deleted
 
 
     public void Start()
@@ -111,20 +112,23 @@ public class Bee : MonoBehaviour
 
     private void DeleteBee()
     {
-      
+        
 
         if (Alignment.ToLower() == "bad")
         {
-            badBeeCount++;
-            Debug.Log($"Bad bees deleted: {badBeeCount}/3");
+            badBeesFound++;
+            Debug.Log($"Bad bees deleted: {badBeesFound}/3");
         }
 
         Destroy(gameObject); // Remove the bee
 
-        if (badBeeCount >= 3)
+        if (badBeesFound == NewBeeSpawner.badBeeCount)
         {
-            Debug.Log("Three bad bees deleted. Loading new scene...");
+            Debug.Log("All bad bees deleted. Loading new scene...");
             SceneManager.LoadScene("NextScene"); // Change "NextScene" to your actual scene name
+        }
+        else {
+            Debug.Log(NewBeeSpawner.badBeeCount);
         }
     }
 }

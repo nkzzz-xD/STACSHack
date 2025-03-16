@@ -6,6 +6,8 @@ public class NewBeeSpawner : MonoBehaviour
     public GameObject spawnpoints;
     public GameObject bee;
 
+    public static int badBeeCount = 0;
+
     string[] beeNames = new string[]
 {
     "Buzz Aldrin", "Bee-yoncé", "Bee Arthur", "Sting Crosby", "Buzz Lightyear", 
@@ -49,6 +51,7 @@ public class NewBeeSpawner : MonoBehaviour
                 myObj.GetComponent<Bee>().Alignment = "good";
             }
             else {
+                badBeeCount++;
                 myObj.GetComponent<Bee>().Alignment = "bad";
             }
 

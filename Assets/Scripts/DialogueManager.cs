@@ -41,6 +41,9 @@ public class DialogueManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return)) {
             DisplayNextSentence();
         }
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            EndDialogue();
+        }
     }
 
     public void StartDialogue(DialogueNode dialogue) {
@@ -169,6 +172,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     void EndDialogue() {
+        StopAllCoroutines();
         animator.SetBool("IsOpen", false);
     }
 }
