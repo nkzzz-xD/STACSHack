@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4397199004086328995}
   - component: {fileID: 2039741810710495312}
   - component: {fileID: 4474278482538476725}
+  - component: {fileID: 573790577430293881}
   m_Layer: 0
   m_Name: BeeProjectile
   m_TagString: Untagged
@@ -147,3 +148,15 @@ MonoBehaviour:
   speed: 20
   lifetime: 5
   damage: 10
+--- !u!114 &573790577430293881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110866678553743571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfda9fcf2aabf2f4d8958cde03c337c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
