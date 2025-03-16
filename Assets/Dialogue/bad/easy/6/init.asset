@@ -17,4 +17,9 @@ MonoBehaviour:
     name: placeholder
     audioClip: {fileID: 0}
     colour: {r: 0, g: 0.054155387, b: 0, a: 1}
+  - sentence: I'll focus on creating initiatives that foster both a strong culture
+      and drive innovation together.
+    name: placeholder
+    audioClip: {fileID: 0}
+    colour: {r: 0, g: 0.054155387, b: 0, a: 1}
   choices: []

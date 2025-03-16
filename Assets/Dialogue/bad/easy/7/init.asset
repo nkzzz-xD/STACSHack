@@ -17,4 +17,9 @@ MonoBehaviour:
     name: placeholder
     audioClip: {fileID: 0}
     colour: {r: 0, g: 0.054155387, b: 0, a: 1}
+  - sentence: I'll identify key areas where we can accelerate progress and ensure
+      we're making the most of digital tools.
+    name: placeholder
+    audioClip: {fileID: 0}
+    colour: {r: 0, g: 0.054155387, b: 0, a: 1}
   choices: []

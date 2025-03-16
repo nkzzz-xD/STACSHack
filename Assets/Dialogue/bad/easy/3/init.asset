@@ -17,4 +17,9 @@ MonoBehaviour:
     name: placeholder
     audioClip: {fileID: 0}
     colour: {r: 0, g: 0, b: 0, a: 1}
+  - sentence: I'll align our strategies to make sure we're fully adapting to the
+      current trends.
+    name: placeholder
+    audioClip: {fileID: 0}
+    colour: {r: 0, g: 0, b: 0, a: 1}
   choices: []

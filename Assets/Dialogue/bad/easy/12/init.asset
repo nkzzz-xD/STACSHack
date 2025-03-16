@@ -13,17 +13,13 @@ MonoBehaviour:
   m_Name: init
   m_EditorClassIdentifier: 
   messages:
-  - sentence: 'Let''s go over the numbers and make sure everything adds up. '
+  - sentence: Let's optimize our end-to-end workflow with AI-powered automation.
     name: placeholder
     audioClip: {fileID: 0}
-    colour: {r: 0, g: 0, b: 0, a: 1}
-  - sentence: Once we go through everything, we can make any necessary adjustments
-      if needed.
+    colour: {r: 0, g: 0.054155387, b: 0, a: 1}
+  - sentence: I'll assess the current processes and identify where we can integrate
+      automation for maximum efficiency.
     name: placeholder
     audioClip: {fileID: 0}
-    colour: {r: 0, g: 0, b: 0, a: 1}
-  choices:
-  - choice: How do you plan to ensure everything adds up correctly?
-    nextNode: {fileID: 0}
-  - choice: Have a good day.
-    nextNode: {fileID: 0}
+    colour: {r: 0, g: 0.054155387, b: 0, a: 1}
+  choices: []

@@ -47,6 +47,8 @@ public class DialogueManager : MonoBehaviour
         messages.Clear();
         choices.Clear();
 
+        if (dialogue == null) return;
+
         continueButton.gameObject.SetActive(false);
         continueButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Continue »";
 
@@ -71,6 +73,7 @@ public class DialogueManager : MonoBehaviour
             StopAllCoroutines();
             dialogueText.text = currentMessage.sentence;
             isTyping = false;
+            continueButton.gameObject.SetActive(true);
             return;
         }
 

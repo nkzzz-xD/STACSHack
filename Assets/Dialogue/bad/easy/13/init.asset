@@ -17,4 +17,9 @@ MonoBehaviour:
     name: placeholder
     audioClip: {fileID: 0}
     colour: {r: 0, g: 0.054155387, b: 0, a: 1}
+  - sentence: I'll design a system that rewards user interaction and makes the experience
+      more engaging.
+    name: placeholder
+    audioClip: {fileID: 0}
+    colour: {r: 0, g: 0.054155387, b: 0, a: 1}
   choices: []

@@ -10,15 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f22b281ec4011c14fa506bdb02f974a2, type: 3}
-  m_Name: init
+  m_Name: New Dialogue Node
   m_EditorClassIdentifier: 
   messages:
-  - sentence: This campaign will move the needle for brand awareness
-    name: placeholder
+  - sentence: "I'll carefully check each detail and make sure the numbers align.
+      If anything looks off, we\u2019ll adjust it right away."
+    name: 
     audioClip: {fileID: 0}
-    colour: {r: 0, g: 0.054155387, b: 0, a: 1}
-  - sentence: Once I have everyone on the same page, we can reconvene and move forward.
-    name: placeholder
-    audioClip: {fileID: 0}
-    colour: {r: 0, g: 0.054155387, b: 0, a: 1}
+    colour: {r: 0, g: 0.98490566, b: 0.91784066, a: 1}
   choices: []
