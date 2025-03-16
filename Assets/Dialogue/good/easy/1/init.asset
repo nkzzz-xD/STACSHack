@@ -24,6 +24,6 @@ MonoBehaviour:
     colour: {r: 0, g: 0, b: 0, a: 1}
   choices:
   - choice: How do you plan to ensure everything adds up correctly?
-    nextNode: {fileID: 0}
+    nextNode: {fileID: 11400000, guid: 47cdff1d1ca2fdb4586f169414fe4efd, type: 2}
   - choice: Have a good day.
     nextNode: {fileID: 0}

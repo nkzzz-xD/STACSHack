@@ -48,6 +48,12 @@ public class Bee : MonoBehaviour
 
         DialogueNode node = AssetDatabase.LoadAssetAtPath<DialogueNode>(filePath);
 
+        if (node == null) {
+            Debug.LogWarning("Null node");
+            dt.dialogue.node = node;
+            return;
+        }
+
         // set all placeholder names to our name
         replacePlaceholder(node);
 
