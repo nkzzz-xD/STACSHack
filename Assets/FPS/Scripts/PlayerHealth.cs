@@ -9,7 +9,9 @@ public class PlayerHealth : MonoBehaviour
     public Image blackScreen;
     public float fadeSpeed = 1.5f;  // Speed of fade effect
     private bool fadeToBlack = false;
+    private bool blackoutComplete = false;  // Track if the blackout is complete
     public TextMeshProUGUI canvasText; // Assign in Inspector
+    public TextMeshProUGUI winningText;
     public bool IsDead { get; private set; }         // Property to check if player is dead
 
     // Event to notify other systems when health changes (optional, for UI updates)
@@ -36,6 +38,17 @@ public class PlayerHealth : MonoBehaviour
             canvasText.alignment = TextAlignmentOptions.Center;
         }
 
+        // Hide the text initially
+        if (winningText != null)
+        {
+            Color textColor = winningText.color;
+            textColor.a = 0;  // Make text invisible
+            winningText.color = textColor;
+
+            // Center the text alignment (optional via script)
+            winningText.alignment = TextAlignmentOptions.Center;
+        }
+
         currentHealth = maxHealth;                   // Initialize health
         IsDead = false;
         OnHealthChanged?.Invoke(currentHealth, maxHealth);  // Update UI if hooked up
@@ -53,7 +66,8 @@ public class PlayerHealth : MonoBehaviour
             // Stop fading once the screen is fully black
             if (newColor.a >= 0.99f)
             {
-                fadeToBlack = false;  // Prevent further fading
+                fadeToBlack = false;
+                blackoutComplete = true;  // Set the blackout as complete
             }
 
             if (canvasText != null)
@@ -71,10 +85,15 @@ public class PlayerHealth : MonoBehaviour
                 }
 
                 canvasText.color = textColor;  // Apply new color with updated alpha
-
-                canvasText.text = "END OF GAME";  // Change text dynamically
                 canvasText.fontSize = 100;  // Adjust font size
             }
+        }
+
+        // If the blackout is complete, stop everything (pause the game)
+        if (blackoutComplete)
+        {
+            Time.timeScale = 0f;  // Pause the game
+            // Optionally, disable any other game objects or do other tasks here
         }
     }
 
@@ -82,6 +101,7 @@ public class PlayerHealth : MonoBehaviour
     public void TriggerBlackout()
     {
         fadeToBlack = true;
+        blackoutComplete = false;  // Reset blackout completion status
     }
 
     public void TakeDamage(int damage)
@@ -115,8 +135,6 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("Player has died!");
 
         // Trigger the blackout effect
-        // gameObject.SetActive(false);  // Disable the player GameObject (it will stop all interactions)
-
         TriggerBlackout();  // Trigger the blackout screen
     }
 
