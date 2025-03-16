@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: init
   m_EditorClassIdentifier: 
   messages:
-  - sentence: I'll check in with the team and see how they're doing.
+  - sentence: I'll get back to you with an update once I have more information.
     name: placeholder
     audioClip: {fileID: 0}
     colour: {r: 0, g: 0, b: 0, a: 1}
