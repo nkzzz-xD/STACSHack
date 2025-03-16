@@ -42902,7 +42902,7 @@ MonoBehaviour:
   dialogueText: {fileID: 859469573}
   continueButton: {fileID: 1669700516}
   animator: {fileID: 268485766}
-  defaultAudio: {fileID: 0}
+  defaultAudio: {fileID: 8300000, guid: 6630c09a69555624cbb62d727ca94d33, type: 3}
   soundFrequency: 2
 --- !u!4 &1418281142
 Transform:
