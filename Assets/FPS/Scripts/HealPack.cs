@@ -60,11 +60,7 @@ public class HealPack : MonoBehaviour
     private void RefreshHealPack()
     {
         available = true;
-        
-        // Re-enable the heal pack
-        if (renderer != null) renderer.enabled = true;
-        if (collider != null) collider.enabled = true;
-        
+
         Debug.Log("Heal pack refreshed!");
     }
 }
