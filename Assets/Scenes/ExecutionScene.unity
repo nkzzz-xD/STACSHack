@@ -3740,7 +3740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfda9fcf2aabf2f4d8958cde03c337c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heal: 40
+  heal: 100
 --- !u!1001 &806648497
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10940,8 +10940,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a60cba861459f44a251b4b966a1878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 200
+  currentHealth: 200
 --- !u!1001 &2050437718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11779,7 +11779,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 573790577430293881, guid: 278e0278dd61fc547a7dd7e6c207b37a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2998471176385188898, guid: 278e0278dd61fc547a7dd7e6c207b37a, type: 3}
