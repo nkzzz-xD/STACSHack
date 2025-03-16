@@ -21,8 +21,7 @@ public class PlayerProjectileMovement : MonoBehaviour
             {
                 enemyHealth.TakeDamage(damage);
             }
-            Destroy(gameObject);
+            Destroy(gameObject.transform.parent);
         }
-        Destroy(gameObject);
     }
 }
