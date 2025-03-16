@@ -30,7 +30,7 @@ public class ScoreCounter : MonoBehaviour
         Vector3 position = new Vector3(10.0f, 5.0f, 10.0f);
 
         GameObject newBee = Instantiate(queenBeePrefab, position, Quaternion.identity);
-        Debug.
+        Debug.Log("Queen Spawned");
     }
 
 }
