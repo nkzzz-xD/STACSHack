@@ -31,7 +31,6 @@ public class ProjectileMovement : MonoBehaviour
                 playerHealth.TakeDamage(damage);
             }
         }
-
         Destroy(gameObject);
     }
 }
