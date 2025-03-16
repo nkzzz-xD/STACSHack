@@ -5,6 +5,7 @@ using System.IO;
 using UnityEditor;
 using System.Linq;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class Bee : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class Bee : MonoBehaviour
     public string Difficulty;
 
     private DialogueTrigger dt;
+    private static int badBeeCount = 0; // Tracks bad bees deleted
 
 
     public void Start()
@@ -97,5 +99,32 @@ public class Bee : MonoBehaviour
     void OnMouseDown()
     {
         Interact();
+    }
+
+    void OnMouseOver()
+    {
+        if (Input.GetMouseButtonDown(1)) // Right-click to delete
+        {
+            DeleteBee();
+        }
+    }
+
+    private void DeleteBee()
+    {
+      
+
+        if (Alignment.ToLower() == "bad")
+        {
+            badBeeCount++;
+            Debug.Log($"Bad bees deleted: {badBeeCount}/3");
+        }
+
+        Destroy(gameObject); // Remove the bee
+
+        if (badBeeCount >= 3)
+        {
+            Debug.Log("Three bad bees deleted. Loading new scene...");
+            SceneManager.LoadScene("NextScene"); // Change "NextScene" to your actual scene name
+        }
     }
 }
