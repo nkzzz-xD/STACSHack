@@ -30987,6 +30987,10 @@ MonoBehaviour:
   Dialogue: 
   Difficulty: 
   beeCounterText: {fileID: 1610401508}
+  player: {fileID: 1866266653}
+  speed: 3
+  offset: 100
+  followPlayer: 0
 --- !u!114 &988981934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55671,6 +55675,11 @@ PrefabInstance:
 --- !u!20 &1866266652 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 4459864851310106426, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+  m_PrefabInstance: {fileID: 1866266651}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1866266653 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4459864851310106429, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
   m_PrefabInstance: {fileID: 1866266651}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1866622146

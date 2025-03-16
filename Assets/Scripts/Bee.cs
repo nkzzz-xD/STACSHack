@@ -21,6 +21,11 @@ public class Bee : MonoBehaviour
     private DialogueTrigger dt;
     private static int badBeesFound = 0; // Tracks bad bees deleted
 
+    public Transform player;
+    public float speed = 3.0f;
+    public float offset = 0f;
+    public bool followPlayer = false;
+
 
     public void Start()
     {
@@ -76,6 +81,13 @@ public class Bee : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if(followPlayer) {
+            FollowPlayer();
+        }
+    }
+
     // Setup the bee's data when it is spawned
     public void Setup(BeeData beeData)
     {
@@ -84,8 +96,6 @@ public class Bee : MonoBehaviour
         Alignment = beeData.Alignment;
         Dialogue = beeData.Dialogue;
         Difficulty = beeData.Difficulty;
-
-        
 
         // You can add any additional setup or behavior here
         Debug.Log("Bee " + Name + " has been spawned with role: " + Role);
@@ -103,6 +113,18 @@ public class Bee : MonoBehaviour
        // beeDialogue.messages[0] = message;
         */
         dt.TriggerDialogue();
+        followPlayer = true;
+    }
+
+        private void FollowPlayer()
+    {
+        Vector3 direction = (player.position - transform.position).normalized;
+        
+        transform.position += direction * speed * Time.deltaTime;
+
+        // Rotate to face the player
+        Quaternion lookRotation = Quaternion.LookRotation(direction);
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation  * Quaternion.Euler(0, offset, 0), Time.deltaTime * 5f);
     }
 
 // mouse down
