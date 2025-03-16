@@ -26,4 +26,4 @@ MonoBehaviour:
   - choice: How do you plan to ensure everything adds up correctly?
     nextNode: {fileID: 11400000, guid: 47cdff1d1ca2fdb4586f169414fe4efd, type: 2}
   - choice: Have a good day.
-    nextNode: {fileID: 0}
+    nextNode: {fileID: 11400000, guid: a80d1e07e72ab2840b74c8a6571e2e21, type: 2}
