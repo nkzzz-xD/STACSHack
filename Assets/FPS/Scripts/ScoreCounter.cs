@@ -21,16 +21,25 @@ public class ScoreCounter : MonoBehaviour
 
         // GameOver victory screen
     }
-    private void SpawnQueenBee()
-    {
-        if (queenBeePrefab == null) return;
+    private void SpawnQueenBee() {
+        if (queenBeePrefab == null)
+        {
+            Debug.LogError("Cannot spawn Queen Bee: Prefab is null!");
+            return;
+        }
 
-        // Random position within spawn radius
-        //Vector3 spawnPos = (10f,5f,10f);
         Vector3 position = new Vector3(33.0f, 10.0f, 0.0f);
-
         GameObject newBee = Instantiate(queenBeePrefab, position, Quaternion.identity);
-        Debug.Log("Queen Spawned");
+
+        if (newBee != null)
+        {
+            Debug.Log("Queen Spawned at " + newBee.transform.position);
+            newBee.SetActive(true); // Ensure it’s active
+        }
+        else
+        {
+            Debug.LogError("Failed to instantiate Queen Bee!");
+        }
     }
 
 }
