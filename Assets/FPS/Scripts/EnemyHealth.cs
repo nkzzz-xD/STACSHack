@@ -4,7 +4,9 @@ public class EnemyHealth : MonoBehaviour
 {
     public int maxHealth = 50;    // Maximum health value
     [SerializeField] private int currentHealth;      // Current health value
-    
+    public string beeType;
+    public ScoreCounter scoreCounter;
+
     public bool IsDead { get; private set; }         // Property to check if player is dead
 
     // Event to notify other systems when health changes (optional, for UI updates)
@@ -25,7 +27,7 @@ public class EnemyHealth : MonoBehaviour
         OnHealthChanged?.Invoke(currentHealth, maxHealth);     // Notify listeners
         
         Debug.Log($"Enemy took {damage} damage. Health: {currentHealth}/{maxHealth}");
-        
+
         if (currentHealth <= 0)
         {
             Die();
@@ -44,6 +46,16 @@ public class EnemyHealth : MonoBehaviour
     private void Die()
     {
         IsDead = true;
+
+        
+        if (beeType == "normal") {
+            scoreCounter.NormalBeeKilled();
+        }
+        else if (beeType == "queen") {
+            scoreCounter.QueenBeeKilled();
+        }
+    
+
         // Add death logic here (e.g., play animation, disable controls, show game over)
         Debug.Log("Robee has died!");
         gameObject.SetActive(false); 
