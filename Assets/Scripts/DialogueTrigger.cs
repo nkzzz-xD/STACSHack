@@ -5,6 +5,6 @@ public class DialogueTrigger : MonoBehaviour
     public Dialogue dialogue;
 
     public void TriggerDialogue() {
-        FindAnyObjectByType<DialogueManager>().StartDialogue(dialogue);
+        FindAnyObjectByType<DialogueManager>().StartDialogue(dialogue.node);
     }
 }
