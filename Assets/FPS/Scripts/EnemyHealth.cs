@@ -25,7 +25,7 @@ public class EnemyHealth : MonoBehaviour
         OnHealthChanged?.Invoke(currentHealth, maxHealth);     // Notify listeners
         
         Debug.Log($"Enemy took {damage} damage. Health: {currentHealth}/{maxHealth}");
-
+        
         if (currentHealth <= 0)
         {
             Die();

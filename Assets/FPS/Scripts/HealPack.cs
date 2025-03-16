@@ -26,6 +26,5 @@ public class HealPack : MonoBehaviour
             }
             Destroy(gameObject);
         }
-        
     }
 }
