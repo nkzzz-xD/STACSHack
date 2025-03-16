@@ -125,7 +125,7 @@ public class Bee : MonoBehaviour
         if (badBeesFound == NewBeeSpawner.badBeeCount)
         {
             Debug.Log("All bad bees deleted. Loading new scene...");
-            SceneManager.LoadScene("NextScene"); // Change "NextScene" to your actual scene name
+            SceneManager.LoadScene("ExecutionScene"); // Change "NextScene" to your actual scene name
         }
         else {
             Debug.Log(NewBeeSpawner.badBeeCount);
