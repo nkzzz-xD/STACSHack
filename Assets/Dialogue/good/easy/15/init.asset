@@ -17,4 +17,9 @@ MonoBehaviour:
     name: placeholder
     audioClip: {fileID: 0}
     colour: {r: 0, g: 0, b: 0, a: 1}
+  - sentence: I'll make sure all safety protocols are followed and address any concerns
+      promptly.
+    name: placeholder
+    audioClip: {fileID: 0}
+    colour: {r: 0, g: 0, b: 0, a: 1}
   choices: []

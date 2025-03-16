@@ -17,4 +17,9 @@ MonoBehaviour:
     name: placeholder
     audioClip: {fileID: 0}
     colour: {r: 0, g: 0, b: 0, a: 1}
+  - sentence: Once I have the details, I'll make sure we get the best deal without
+      compromising on quality.
+    name: placeholder
+    audioClip: {fileID: 0}
+    colour: {r: 0, g: 0, b: 0, a: 1}
   choices: []

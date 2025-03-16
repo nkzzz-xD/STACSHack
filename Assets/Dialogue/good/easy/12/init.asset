@@ -17,4 +17,9 @@ MonoBehaviour:
     name: placeholder
     audioClip: {fileID: 0}
     colour: {r: 0, g: 0, b: 0, a: 1}
+  - sentence: By prioritizing their needs, we can continue to build loyalty and grow
+      our business.
+    name: placeholder
+    audioClip: {fileID: 0}
+    colour: {r: 0, g: 0, b: 0, a: 1}
   choices: []

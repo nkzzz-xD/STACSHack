@@ -17,4 +17,8 @@ MonoBehaviour:
     name: placeholder
     audioClip: {fileID: 0}
     colour: {r: 0, g: 0, b: 0, a: 1}
+  - sentence: Once I have an update, I'll let you know where things stand.
+    name: placeholder
+    audioClip: {fileID: 0}
+    colour: {r: 0, g: 0, b: 0, a: 1}
   choices: []
