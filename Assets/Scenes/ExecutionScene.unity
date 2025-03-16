@@ -8476,6 +8476,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 4b8bcc445bbcd7d488ce7436dc1af951, type: 2}
+    - target: {fileID: 6408129612645063318, guid: 57c214aeb2595e94c91dddb4ab355cc2, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8688042474917226108, guid: 57c214aeb2595e94c91dddb4ab355cc2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.42
@@ -13310,11 +13314,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2039741810710495312, guid: 278e0278dd61fc547a7dd7e6c207b37a, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2039741810710495312, guid: 278e0278dd61fc547a7dd7e6c207b37a, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2998471176385188898, guid: 278e0278dd61fc547a7dd7e6c207b37a, type: 3}
       propertyPath: m_LocalScale.x
@@ -13374,7 +13378,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4397199004086328995, guid: 278e0278dd61fc547a7dd7e6c207b37a, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4474278482538476725, guid: 278e0278dd61fc547a7dd7e6c207b37a, type: 3}
+      propertyPath: speed
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4474278482538476725, guid: 278e0278dd61fc547a7dd7e6c207b37a, type: 3}
       propertyPath: m_Enabled
@@ -13382,6 +13390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 573790577430293881, guid: 278e0278dd61fc547a7dd7e6c207b37a, type: 3}
+    - {fileID: 2039741810710495312, guid: 278e0278dd61fc547a7dd7e6c207b37a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2998471176385188898, guid: 278e0278dd61fc547a7dd7e6c207b37a, type: 3}
