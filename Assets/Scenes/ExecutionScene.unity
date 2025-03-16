@@ -3740,6 +3740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfda9fcf2aabf2f4d8958cde03c337c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heal: 40
 --- !u!1001 &806648497
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11802,6 +11803,18 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 216131415}
+    - target: {fileID: 4784344481166930983, guid: 86fa2f2666f06c746b4caa825d7a977f, type: 3}
+      propertyPath: m_Name
+      value: QueenBee
+      objectReference: {fileID: 0}
+    - target: {fileID: 6657153899582163419, guid: 86fa2f2666f06c746b4caa825d7a977f, type: 3}
+      propertyPath: maxHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6657153899582163419, guid: 86fa2f2666f06c746b4caa825d7a977f, type: 3}
+      propertyPath: currentHealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7069918044398748117, guid: 86fa2f2666f06c746b4caa825d7a977f, type: 3}
       propertyPath: m_Name
       value: MyCombinedAsset
