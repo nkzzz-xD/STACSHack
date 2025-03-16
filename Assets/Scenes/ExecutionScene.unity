@@ -376,8 +376,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
-  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4261,9 +4261,6 @@ MonoBehaviour:
   spawnRadius: 3
   spawnInterval: 5
   maxSpawnedBees: 5
-  blackScreen: {fileID: 0}
-  canvasText: {fileID: 0}
-  fadeSpeed: 1.5
 --- !u!1 &769627335
 GameObject:
   m_ObjectHideFlags: 0
@@ -8065,6 +8062,9 @@ MonoBehaviour:
   normalBeesAlive: 5
   queenBeeAlive: 1
   queenBeePrefab: {fileID: 767284700}
+  blackScreen: {fileID: 773890768}
+  fadeSpeed: 1.5
+  canvasText: {fileID: 1927157192}
 --- !u!1001 &1366223449
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12159,8 +12159,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
-  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -12873,6 +12873,7 @@ MonoBehaviour:
   blackScreen: {fileID: 773890768}
   fadeSpeed: 1.5
   canvasText: {fileID: 56988123}
+  winningText: {fileID: 1927157192}
 --- !u!1001 &2050437718
 PrefabInstance:
   m_ObjectHideFlags: 0

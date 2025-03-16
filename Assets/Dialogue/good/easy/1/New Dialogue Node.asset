@@ -15,7 +15,7 @@ MonoBehaviour:
   messages:
   - sentence: "I'll carefully check each detail and make sure the numbers align.
       If anything looks off, we\u2019ll adjust it right away."
-    name: 
+    name: placeholder
     audioClip: {fileID: 0}
     colour: {r: 0, g: 0.98490566, b: 0.91784066, a: 1}
   choices: []

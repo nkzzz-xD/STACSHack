@@ -6,6 +6,7 @@ using UnityEditor;
 using System.Linq;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
+using TMPro;
 using System;
 
 public class Bee : MonoBehaviour
@@ -15,6 +16,7 @@ public class Bee : MonoBehaviour
     public string Alignment;
     public string Dialogue;
     public string Difficulty;
+    public TextMeshProUGUI beeCounterText;
 
     private DialogueTrigger dt;
     private static int badBeesFound = 0; // Tracks bad bees deleted
@@ -22,6 +24,7 @@ public class Bee : MonoBehaviour
 
     public void Start()
     {
+        beeCounterText.text = "Bad Bees Found: 0/3";
         dt = gameObject.GetComponent<DialogueTrigger>();
         string path;
         if (Alignment.ToLower() == "good") {
@@ -47,6 +50,12 @@ public class Bee : MonoBehaviour
         filePath = Path.Combine(filePath, "init.asset");
 
         DialogueNode node = AssetDatabase.LoadAssetAtPath<DialogueNode>(filePath);
+
+        if (node == null) {
+            Debug.LogWarning("Null node");
+            dt.dialogue.node = node;
+            return;
+        }
 
         // set all placeholder names to our name
         replacePlaceholder(node);
@@ -117,6 +126,8 @@ public class Bee : MonoBehaviour
         if (Alignment.ToLower() == "bad")
         {
             badBeesFound++;
+            Debug.Log("Changing the text");
+            beeCounterText.text = $"Bad Bees Found: {badBeesFound}/3";
             Debug.Log($"Bad bees deleted: {badBeesFound}/3");
         }
 
