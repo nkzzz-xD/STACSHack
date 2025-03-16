@@ -24,7 +24,7 @@ public class Bee : MonoBehaviour
 
     public void Start()
     {
-        beeCounterText.text = "Bad Bees Found: 0/3";
+        beeCounterText.text = "Bad Bees Found: 0/5";
         dt = gameObject.GetComponent<DialogueTrigger>();
         string path;
         if (Alignment.ToLower() == "good") {
@@ -127,13 +127,13 @@ public class Bee : MonoBehaviour
         {
             badBeesFound++;
             Debug.Log("Changing the text");
-            beeCounterText.text = $"Bad Bees Found: {badBeesFound}/3";
-            Debug.Log($"Bad bees deleted: {badBeesFound}/3");
+            beeCounterText.text = $"Bad Bees Found: {badBeesFound}/5";
+            Debug.Log($"Bad bees deleted: {badBeesFound}/5");
         }
 
         Destroy(gameObject); // Remove the bee
 
-        if (badBeesFound == 4)
+        if (badBeesFound == 5)
         {
             Debug.Log("All bad bees deleted. Loading new scene...");
             SceneManager.LoadScene("ExecutionScene"); // Change "NextScene" to your actual scene name
