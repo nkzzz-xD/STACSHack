@@ -122,7 +122,7 @@ public class Bee : MonoBehaviour
 
         Destroy(gameObject); // Remove the bee
 
-        if (badBeesFound == NewBeeSpawner.badBeeCount)
+        if (badBeesFound == 4)
         {
             Debug.Log("All bad bees deleted. Loading new scene...");
             SceneManager.LoadScene("ExecutionScene"); // Change "NextScene" to your actual scene name
