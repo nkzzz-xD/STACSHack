@@ -7347,7 +7347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalBeesAlive: 2
   queenBeeAlive: 1
-  queenBeePrefab: {fileID: 0}
+  queenBeePrefab: {fileID: 680867719}
 --- !u!1001 &1366223449
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8694,7 +8694,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2141676431450117668, guid: cd17687759887a0438ee021e51abc9d9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.31
+      value: 9.39
       objectReference: {fileID: 0}
     - target: {fileID: 2141676431450117668, guid: cd17687759887a0438ee021e51abc9d9, type: 3}
       propertyPath: m_LocalRotation.w
