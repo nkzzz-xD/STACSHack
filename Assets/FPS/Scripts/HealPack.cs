@@ -22,7 +22,7 @@ public class HealPack : MonoBehaviour
             PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
             if (playerHealth != null)
             {
-                playerHealth.heal(heal);
+                playerHealth.Heal(heal);
             }
             Destroy(gameObject);
         }
